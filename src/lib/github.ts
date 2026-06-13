@@ -68,7 +68,7 @@ async function fetchFromRepo(
     `${GITHUB_API}/repos/${username}/${repo}/commits?per_page=1`,
     {
       headers: getHeaders(),
-      next: { revalidate: 3600 },
+      next: { revalidate: 300 },
     },
   );
 
@@ -84,11 +84,12 @@ async function fetchFromRepo(
 async function fetchFromRecentRepos(
   username: string,
 ): Promise<LatestCommit | null> {
+  // Use /user/repos (authenticated) so private repos are included
   const response = await fetch(
-    `${GITHUB_API}/users/${username}/repos?sort=pushed&per_page=10`,
+    `${GITHUB_API}/user/repos?sort=pushed&per_page=10`,
     {
       headers: getHeaders(),
-      next: { revalidate: 3600 },
+      next: { revalidate: 300 },
     },
   );
 
@@ -106,11 +107,13 @@ async function fetchFromRecentRepos(
 }
 
 async function fetchFromEvents(username: string): Promise<LatestCommit | null> {
+  // Use the authenticated events endpoint (no /public suffix) so private
+  // repo pushes are visible when a token is present
   const response = await fetch(
-    `${GITHUB_API}/users/${username}/events/public?per_page=30`,
+    `${GITHUB_API}/users/${username}/events?per_page=30`,
     {
       headers: getHeaders(),
-      next: { revalidate: 3600 },
+      next: { revalidate: 300 },
     },
   );
 
@@ -147,18 +150,20 @@ async function fetchFromEvents(username: string): Promise<LatestCommit | null> {
 
 export async function getLatestCommit(): Promise<LatestCommit | null> {
   const { githubUsername, githubRepo } = siteConfig;
-  const repoCandidates = [githubRepo, "ankit-bhavarthe-portfolio"];
 
   try {
-    for (const repo of repoCandidates) {
-      const fromRepo = await fetchFromRepo(githubUsername, repo);
-      if (fromRepo) return fromRepo;
-    }
-
+    // Scan repos sorted by most-recently-pushed — works for both public
+    // and private repos when a token with `repo` scope is present.
+    // (Private push events are NOT exposed via GitHub's events API.)
     const fromRecent = await fetchFromRecentRepos(githubUsername);
     if (fromRecent) return fromRecent;
 
-    return await fetchFromEvents(githubUsername);
+    // Fall back to the public events feed
+    const fromEvents = await fetchFromEvents(githubUsername);
+    if (fromEvents) return fromEvents;
+
+    // Last resort: check the configured portfolio repo directly
+    return await fetchFromRepo(githubUsername, githubRepo);
   } catch {
     return null;
   }
