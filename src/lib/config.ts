@@ -1,0 +1,42 @@
+export const siteConfig = {
+  name: "Ankit Bhavarthe",
+  title: "Ankit Bhavarthe — Software Engineer",
+  description:
+    "Software engineer crafting clean, scalable full-stack products. Currently open to new opportunities.",
+  tagline: "Design, code, and deploy",
+  taglineAccent: "things that matter",
+  bio: "Software engineer crafting clean, scalable full-stack products. Currently open to new opportunities.",
+  email: "ankitbhavarthe.dev@gmail.com",
+  github: "https://github.com/Ankit-2563",
+  linkedin: "https://www.linkedin.com/in/ankit-bhavarthe-860822290/",
+  twitter: "https://x.com/AnkitBhava4934",
+  githubUsername: "Ankit-2563",
+  githubRepo: "ankitbhavarthe-portfolio",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  openToWork: true,
+  stickyNote: "Ship fast. Iterate often. Write clean code.",
+  footerQuote: "Build systems that outlast the hype.",
+  techStack: [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "PostgreSQL",
+    "Docker",
+    "AWS",
+  ],
+  projects: [
+    {
+      name: "CodeAtlas",
+      description: "Developer tooling platform for code intelligence",
+      url: "https://github.com/Ankit-2563/codeatlas-client",
+      starred: true,
+    },
+    {
+      name: "RAG",
+      description: "Retrieval-augmented generation pipeline",
+      url: "https://github.com/Ankit-2563/rag",
+      starred: true,
+    },
+  ],
+} as const;
