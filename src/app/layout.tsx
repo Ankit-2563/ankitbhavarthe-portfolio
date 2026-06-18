@@ -132,7 +132,11 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${sora.variable} ${caveat.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${sora.variable} ${caveat.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
       <head>
         <script
           type="application/ld+json"
