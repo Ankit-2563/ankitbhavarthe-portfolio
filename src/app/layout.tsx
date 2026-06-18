@@ -16,6 +16,8 @@ const caveat = Caveat({
   weight: ["400", "600"],
 });
 
+import { navigationLinks } from "@/lib/navigation";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: siteConfig.title,
@@ -102,12 +104,47 @@ export default function RootLayout({
     description: siteConfig.description,
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${baseUrl}/#website`,
+    url: baseUrl,
+    name: siteConfig.name,
+    description: siteConfig.description,
+    publisher: {
+      "@id": `${baseUrl}/#person`,
+    },
+  };
+
+  const navigationSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Site Navigation",
+    itemListElement: navigationLinks.map((link, index) => ({
+      "@type": "SiteNavigationElement",
+      position: index + 1,
+      name: link.name,
+      url: link.url.startsWith("http")
+        ? link.url
+        : `${baseUrl}${link.url.startsWith("/") ? "" : "/"}${link.url}`,
+      description: link.description,
+    })),
+  };
+
   return (
     <html lang="en" className={`${sora.variable} ${caveat.variable} h-full antialiased`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(navigationSchema) }}
         />
       </head>
       <body className="flex min-h-full flex-col">
@@ -116,3 +153,4 @@ export default function RootLayout({
     </html>
   );
 }
+
