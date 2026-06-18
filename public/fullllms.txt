@@ -37,3 +37,65 @@ Ankit Bhavarthe is a Full Stack Developer, UI/UX Designer, and Co-Founder of Kai
 
 ---
 
+## Education
+**B.E. in Computer Engineering**
+*Shivajirao S. Jondhale College of Engineering* | *December 2021 – May 2025* | Mumbai, India
+- **Cumulative Grade Point Average (CGPA)**: 8.04 / 10.00
+
+---
+
+## Patent & Publications
+
+### Patent Application
+- **Patent Application No. 202421077920**
+- **Title**: Python-Based Metro Ticketing using Face Recognition
+- **Details**: A contactless facial recognition-based ticketing system designed to eliminate physical tokens/tickets in transit networks.
+
+### Publications
+- **AnguliLekha — Indian Sign Language Recognition System**
+- **Journal**: Published in International Journal of Advanced Research in Science, Communication and Technology (IJARSCT).
+- **Details**: Research and development of a 95% accurate sign language recognition interface.
+
+---
+
+## Projects
+
+### FALSENINE — Serverless E-Commerce Platform
+- **Technologies**: Next.js, Express.js, Node.js, AWS Lambda, DynamoDB, Razorpay, Amazon S3, AWS Amplify
+- **Details**:
+  - Developed a full stack football merchandise e-commerce platform using Next.js for the frontend and a serverless Express/Node.js backend hosted on AWS Lambda with API Gateway and DynamoDB.
+  - Integrated Amazon S3 storage, JWT authentication, and Razorpay payment gateway.
+  - Automated CI/CD pipelines via AWS Amplify, complete with domain routing and SSL management.
+
+### Harumemoirs — Client Blog Web Application
+- **Technologies**: Next.js, Node.js, PostgreSQL, Tailwind CSS
+- **URL**: [harumemoirs.xyz](https://harumemoirs.xyz)
+- **Details**:
+  - Designed and delivered a production-ready, full stack blog platform for a client.
+  - Features include dynamic routing, search engine optimization (SEO), and a custom Content Management System (CMS).
+  - Deployed to production with custom domain setup and automated CI/CD pipelines.
+
+### CRUX — Smart EV Battery Management System
+- **Technologies**: React Native (Expo), Express.js, MongoDB, ESP32, Gemini AI
+- **Details**: IoT-based Smart EV Battery monitoring system integrating embedded hardware (ESP32) with a mobile application interface and AI-driven telemetry analytics.
+
+### AnguliLekha — ISL Recognition System
+- **Technologies**: Next.js, TensorFlow.js
+- **Details**: Real-time browser-based Indian Sign Language translator achieving 95% classification accuracy under client-side computing.
+
+### Metro Ticketing System
+- **Technologies**: React, Python, OpenCV
+- **Details**: Transit ticketing platform consisting of a React web client and a Python desktop app running OpenCV face detection and recognition.
+
+---
+
+## Technical Skills
+
+- **Frontend**: React.js, Next.js, React Native (Expo), HTML, CSS, Tailwind CSS, TypeScript, WebGL, Three.js, GSAP
+- **Backend**: Node.js, Express.js, Python, Flask, Hono, REST APIs
+- **Databases**: MongoDB, PostgreSQL, DynamoDB, Firebase Firestore
+- **Cloud & DevOps**: AWS (Lambda, Amplify, API Gateway, S3), CI/CD, Serverless Architecture
+- **AI/ML**: TensorFlow.js, OpenCV, Gemini AI, Computer Vision, Face Recognition
+- **Embedded Systems**: Arduino, ESP32, IoT Firmware, Sensor Integration
+- **Developer Tools**: Git, GitHub, VS Code
+- **Core Concepts**: System Design, UI/UX Design, JWT Authentication, Performance Optimization, Search Engine Optimization (SEO)
