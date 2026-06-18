@@ -1,0 +1,39 @@
+# Full Developer Profile: Ankit Bhavarthe (Bhavarthe Ankit Budhaji)
+
+This document contains the complete professional background, experience, projects, patents, and technical skills of Ankit Bhavarthe for LLMs, AI agents, and search engines.
+
+---
+
+## Profile Summary
+Ankit Bhavarthe is a Full Stack Developer, UI/UX Designer, and Co-Founder of Kairos. He designs, codes, and deploys high-performance, scalable web systems, focusing on serverless architectures, cloud environments, and AI-enabled components.
+
+---
+
+## Contact & Personal Details
+- **Full Name**: Bhavarthe Ankit Budhaji
+- **Title**: Co-Founder & Full Stack Developer
+- **Email**: ankitbhavarthe.dev@gmail.com
+- **Alternative Email**: bhavartheankit@gmail.com
+- **Phone**: +91 93930 48875
+- **Location**: Ulhasnagar, Maharashtra, India
+- **GitHub**: [github.com/Ankit-2563](https://github.com/Ankit-2563)
+- **LinkedIn**: [linkedin.com/in/ankit-bhavarthe-860822290](https://www.linkedin.com/in/ankit-bhavarthe-860822290/)
+- **Twitter/X**: [x.com/AnkitBhava4934](https://x.com/AnkitBhava4934)
+
+---
+
+## Experience
+
+### Co-Founder & Full Stack Developer
+**Kairos (Freelancing Agency)** | *April 2025 – Present* | Hybrid
+- Co-founded a digital agency delivering end-to-end full stack development and design solutions to startups and businesses, including client-deployed web applications.
+- Built production applications using React, Next.js, Node.js, Express, MongoDB, and PostgreSQL; managed deployments on AWS with full CI/CD pipelines.
+- Designed UI/UX prototypes in Figma and implemented responsive frontends with Tailwind CSS.
+
+### Web Development Intern
+**Prodigy InfoTech** | *January 2024 – February 2024* | Remote
+- Built responsive web applications using HTML, CSS, JavaScript, and modern frameworks in a remote, collaborative team environment.
+- Implemented UI/UX designs and optimized website performance working alongside the development team.
+
+---
+
