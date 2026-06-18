@@ -1,0 +1,21 @@
+# Ankit Bhavarthe
+
+> Ankit Bhavarthe (Bhavarthe Ankit Budhaji) is a Full Stack Developer, UI/UX Designer, and Co-Founder of Kairos (a digital agency). Specializes in building scalable production applications with Next.js, React, Node.js, Express, AWS, and serverless architectures.
+
+## Contact Information
+- **Email**: ankitbhavarthe.dev@gmail.com
+- **Alternative Email**: bhavartheankit@gmail.com
+- **Phone**: +91 93930 48875
+- **Location**: Ulhasnagar, India
+- **GitHub**: [github.com/Ankit-2563](https://github.com/Ankit-2563)
+- **LinkedIn**: [linkedin.com/in/ankit-bhavarthe-860822290](https://www.linkedin.com/in/ankit-bhavarthe-860822290/)
+- **Twitter**: [x.com/AnkitBhava4934](https://x.com/AnkitBhava4934)
+
+## Key Details
+- **Current Role**: Co-Founder & Full Stack Developer at Kairos (April 2025 – Present)
+- **Education**: B.E. in Computer Engineering from Shivajirao S. Jondhale College of Engineering (CGPA: 8.04, Dec 2021 – May 2025)
+- **Patent Application**: Published Patent Application No. 202421077920 – "Python-Based Metro Ticketing using Face Recognition"
+- **Primary Tech Stack**: TypeScript, React, Next.js, Node.js, PostgreSQL, MongoDB, AWS (Lambda, Amplify, S3), TensorFlow.js, OpenCV, Gemini AI
+
+## Full Profile & CV
+- [/fullllms.txt](/fullllms.txt): Detailed breakdown of experience, projects, education, publications, and technical skills inventory for direct LLM consumption.
