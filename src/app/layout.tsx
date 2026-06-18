@@ -52,8 +52,64 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const baseUrl = siteConfig.siteUrl.replace(/\/$/, "");
+
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${baseUrl}/#person`,
+    name: siteConfig.name,
+    alternateName: ["Bhavarthe Ankit Budhaji", "Ankit Budhaji Bhavarthe"],
+    url: baseUrl,
+    image: `${baseUrl}/og-image.png`,
+    sameAs: [
+      siteConfig.github,
+      siteConfig.linkedin,
+      siteConfig.twitter,
+    ],
+    jobTitle: "Co-Founder & Full Stack Developer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Kairos",
+      description: "Digital agency delivering end-to-end full stack development and design solutions.",
+    },
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Shivajirao S. Jondhale College of Engineering",
+    },
+    knowsAbout: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "AWS",
+      "Tailwind CSS",
+      "MongoDB",
+      "Express.js",
+      "Serverless Architecture",
+      "TensorFlow.js",
+      "OpenCV",
+      "Computer Vision",
+      "Face Recognition",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Ulhasnagar",
+      addressCountry: "IN",
+    },
+    email: siteConfig.email,
+    description: siteConfig.description,
+  };
+
   return (
     <html lang="en" className={`${sora.variable} ${caveat.variable} h-full antialiased`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </head>
       <body className="flex min-h-full flex-col">
         <LenisProvider>{children}</LenisProvider>
       </body>
