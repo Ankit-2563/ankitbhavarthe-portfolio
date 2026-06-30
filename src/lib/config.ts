@@ -10,6 +10,7 @@ export const siteConfig = {
   github: "https://github.com/Ankit-2563",
   linkedin: "https://www.linkedin.com/in/ankit-bhavarthe-860822290/",
   twitter: "https://x.com/AnkitBhava4934",
+  dribbble: "https://dribbble.com/kairosagency-work",
   githubUsername: "Ankit-2563",
   githubRepo: "ankitbhavarthe-portfolio",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
