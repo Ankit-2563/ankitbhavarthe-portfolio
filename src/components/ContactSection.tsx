@@ -33,44 +33,72 @@ function DribbbleIcon() {
 }
 
 const socialLinks = [
-  { label: "GitHub", href: siteConfig.github, icon: GitHubIcon },
-  { label: "LinkedIn", href: siteConfig.linkedin, icon: LinkedInIcon },
-  { label: "Twitter", href: siteConfig.twitter, icon: TwitterIcon },
-  { label: "Dribbble", href: siteConfig.dribbble, icon: DribbbleIcon },
+  {
+    title: "LinkedIn",
+    description: "Professional networking, career history, and connections",
+    href: siteConfig.linkedin,
+  },
+  {
+    title: "Twitter",
+    description: "Personal thoughts, updates, and building in public",
+    href: siteConfig.twitter,
+  },
+  {
+    title: "Building",
+    description: "enclave.ankitbhavarthe.xyz — projects, experiments, and active development",
+    href: "https://enclave.ankitbhavarthe.xyz",
+  },
 ];
 
 export function ContactSection() {
   return (
     <section id="contact" className="contact-section px-6 py-20">
-      <div className="mx-auto max-w-xl text-center">
-        <h2
-          className="mb-3 text-3xl font-bold text-gray-900 md:text-4xl"
-          style={{ letterSpacing: "-0.02em" }}
-        >
-          Let&apos;s work together
-        </h2>
-        <p className="mx-auto mb-8 max-w-sm leading-relaxed text-gray-500">
-          Have a project in mind or just want to say hi? My inbox is always open.
-        </p>
-        <a
-          id="contact-email"
-          href={`mailto:${siteConfig.email}`}
-          className="email-link mb-10 block"
-        >
-          {siteConfig.email}
-        </a>
+      <div className="mx-auto max-w-xl">
+        <div className="text-center mb-8">
+          <h2
+            className="mb-3 text-3xl font-bold text-gray-900 md:text-4xl"
+            style={{ letterSpacing: "-0.02em" }}
+          >
+            Let&apos;s work together
+          </h2>
+          <p className="mx-auto mb-8 max-w-sm leading-relaxed text-gray-500">
+            Have a project in mind or just want to say hi? My inbox is always open.
+          </p>
+          <a
+            id="contact-email"
+            href={`mailto:${siteConfig.email}`}
+            className="email-link mb-10 block"
+          >
+            {siteConfig.email}
+          </a>
+        </div>
 
-        <div className="flex flex-wrap justify-center gap-3">
-          {socialLinks.map(({ label, href, icon: Icon }) => (
+        <div className="mx-auto max-w-lg border-y border-gray-200 divide-y divide-gray-200">
+          {socialLinks.map(({ title, description, href }) => (
             <a
-              key={label}
+              key={title}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="social-link"
+              className="flex items-center justify-between py-4 px-2 hover:bg-gray-50/50 transition-colors group"
             >
-              <Icon />
-              {label}
+              <div className="text-left pr-4">
+                <h3 className="text-base font-semibold text-blue-600 group-hover:underline md:text-lg">
+                  {title}
+                </h3>
+                <p className="mt-1 text-sm text-gray-500">
+                  {description}
+                </p>
+              </div>
+              <svg
+                className="h-5 w-5 text-gray-400 group-hover:text-blue-600 transition-colors transform group-hover:translate-x-0.5 shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
             </a>
           ))}
         </div>
