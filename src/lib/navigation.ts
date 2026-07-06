@@ -20,28 +20,25 @@ export const navigationLinks: NavigationLink[] = [
     priority: 1.0,
     changeFrequency: "monthly",
   },
-  // Example for future pages:
-  /*
   {
-    name: "Projects",
-    url: "/projects",
-    description: "A showcase of Ankit's full-stack and serverless software projects.",
-    priority: 0.8,
-    changeFrequency: "weekly",
-  },
-  {
-    name: "Experience",
-    url: "/experience",
-    description: "Ankit Bhavarthe's professional journey, freelancing agency work, and interns.",
+    name: "LinkedIn",
+    url: siteConfig.linkedin,
+    description: "Connect with me professionally, view my resume, and see my work history.",
     priority: 0.8,
     changeFrequency: "monthly",
   },
   {
-    name: "Contact",
-    url: "/contact",
-    description: "Get in touch with Ankit Bhavarthe for business inquiries or software development services.",
-    priority: 0.7,
-    changeFrequency: "yearly",
-  }
-  */
+    name: "Twitter",
+    url: siteConfig.twitter,
+    description: "Follow my thoughts, tech updates, and building in public progress.",
+    priority: 0.8,
+    changeFrequency: "monthly",
+  },
+  {
+    name: "Building",
+    url: "https://enclave.ankitbhavarthe.xyz",
+    description: "Check out enclave.ankitbhavarthe.xyz — what I'm currently designing and coding.",
+    priority: 0.8,
+    changeFrequency: "weekly",
+  },
 ];
