@@ -13,7 +13,7 @@ export const siteConfig = {
   dribbble: "https://dribbble.com/kairosagency-work",
   githubUsername: "Ankit-2563",
   githubRepo: "ankitbhavarthe-portfolio",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ankitbhavarthe.xyz",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ankitbhavarthe.xyz",
   openToWork: true,
   stickyNote: "Ship fast. Iterate often. Write clean code.",
   footerQuote: "Build systems that outlast the hype.",
