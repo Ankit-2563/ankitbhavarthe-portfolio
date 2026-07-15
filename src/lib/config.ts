@@ -34,9 +34,9 @@ export const siteConfig = {
       starred: true,
     },
     {
-      name: "RAG",
-      description: "Retrieval-augmented generation pipeline",
-      url: "https://github.com/Ankit-2563/rag",
+      name: "Enclave CLI",
+      description: "Secure secrets management for developer teams",
+      url: "https://github.com/Ankit-2563/enclave-cli",
       starred: true,
     },
   ],
