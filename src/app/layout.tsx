@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Caveat, Sora } from "next/font/google";
-import { LenisProvider } from "@/components/client/LenisProvider";
 import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
@@ -15,8 +14,6 @@ const caveat = Caveat({
   subsets: ["latin"],
   weight: ["400", "600"],
 });
-
-import { navigationLinks } from "@/lib/navigation";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -119,17 +116,22 @@ export default function RootLayout({
     },
   };
 
+  const siteLinks = [
+    { name: "Home", url: baseUrl, description: siteConfig.description },
+    { name: "GitHub", url: siteConfig.github, description: "Open source projects and code" },
+    { name: "LinkedIn", url: siteConfig.linkedin, description: "Professional profile and work history" },
+    { name: "Twitter", url: siteConfig.twitter, description: "Thoughts and building in public" },
+  ];
+
   const navigationSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Site Navigation",
-    itemListElement: navigationLinks.map((link, index) => ({
+    itemListElement: siteLinks.map((link, index) => ({
       "@type": "SiteNavigationElement",
       position: index + 1,
       name: link.name,
-      url: link.url.startsWith("http")
-        ? link.url
-        : `${baseUrl}${link.url.startsWith("/") ? "" : "/"}${link.url}`,
+      url: link.url,
       description: link.description,
     })),
   };
@@ -155,9 +157,8 @@ export default function RootLayout({
         />
       </head>
       <body className="flex min-h-full flex-col">
-        <LenisProvider>{children}</LenisProvider>
+        {children}
       </body>
     </html>
   );
 }
-
