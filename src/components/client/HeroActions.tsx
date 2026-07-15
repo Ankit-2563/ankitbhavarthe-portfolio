@@ -1,6 +1,5 @@
 "use client";
 
-import { useLenis } from "@/components/client/LenisProvider";
 import { siteConfig } from "@/lib/config";
 
 function GitHubIcon() {
@@ -12,18 +11,10 @@ function GitHubIcon() {
 }
 
 export function HeroActions() {
-  const lenis = useLenis();
-
   const scrollToContact = () => {
-    const target = document.getElementById("contact-email");
-    if (!target) return;
-
-    if (lenis) {
-      lenis.scrollTo(target, { offset: -80, duration: 1.4 });
-      return;
-    }
-
-    target.scrollIntoView({ behavior: "smooth", block: "center" });
+    document
+      .getElementById("contact-email")
+      ?.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
   return (
