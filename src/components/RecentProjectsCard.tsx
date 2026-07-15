@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/config";
 export function RecentProjectsCard() {
   return (
     <div className="float-card-5 pointer-events-none absolute right-4 bottom-16 z-0 hidden w-fit md:right-10 md:block">
-      <div className="floating-card w-56 rounded-2xl border border-gray-100 bg-white p-4 shadow-lg">
+      <div className="floating-card pointer-events-auto w-56 rounded-2xl border border-gray-100 bg-white p-4 shadow-lg">
         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
           Recent Projects
         </p>
