@@ -34,26 +34,6 @@ html {
   animation: float-up 0.8s ease both;
 }
 
-.float-card-1 .floating-card {
-  animation-delay: 0.15s;
-}
-
-.float-card-2 .floating-card {
-  animation-delay: 0.25s;
-}
-
-.float-card-3 .floating-card {
-  animation-delay: 0.35s;
-}
-
-.float-card-4 .floating-card {
-  animation-delay: 0.45s;
-}
-
-.float-card-5 .floating-card {
-  animation-delay: 0.55s;
-}
-
 @keyframes float-up {
   from {
     opacity: 0;
@@ -96,22 +76,6 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.delay-1 {
-  animation-delay: 0.1s;
-}
-
-.delay-2 {
-  animation-delay: 0.25s;
-}
-
-.delay-3 {
-  animation-delay: 0.4s;
-}
-
-.delay-4 {
-  animation-delay: 0.55s;
 }
 
 .status-dot {

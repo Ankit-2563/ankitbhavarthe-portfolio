@@ -2,7 +2,7 @@ import { siteConfig } from "@/lib/config";
 
 export function StickyNote() {
   return (
-    <div className="float-card-1 pointer-events-none absolute top-12 left-6 z-0 hidden w-fit sm:block md:left-16">
+    <div className="pointer-events-none absolute top-12 left-6 z-0 hidden w-fit sm:block md:left-16">
       <div
         className="floating-card relative w-44 rounded-lg p-4 leading-snug shadow-md"
         style={{
@@ -27,7 +27,7 @@ export function OpenToWorkBadge() {
   if (!siteConfig.openToWork) return null;
 
   return (
-    <div className="float-card-2 pointer-events-none absolute top-48 left-8 z-0 hidden w-fit lg:block xl:left-24">
+    <div className="pointer-events-none absolute top-48 left-8 z-0 hidden w-fit lg:block xl:left-24">
       <div className="floating-card flex w-fit items-center gap-3 rounded-2xl border border-green-100 bg-green-50 px-4 py-3 shadow-lg">
         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-green-500">
           <svg

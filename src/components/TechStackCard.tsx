@@ -2,7 +2,7 @@ import { siteConfig } from "@/lib/config";
 
 export function TechStackCard() {
   return (
-    <div className="float-card-4 pointer-events-none absolute bottom-16 left-4 z-0 hidden w-fit md:left-10 md:block">
+    <div className="pointer-events-none absolute bottom-16 left-4 z-0 hidden w-fit md:left-10 md:block">
       <div className="floating-card w-52 rounded-2xl border border-gray-100 bg-white p-4 shadow-lg">
         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
           Tech Stack

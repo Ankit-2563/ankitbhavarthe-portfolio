@@ -18,7 +18,7 @@ export function HeroActions() {
   };
 
   return (
-    <div className="hero-enter delay-4 mt-10 flex flex-row flex-wrap items-center justify-center gap-3">
+    <div className="hero-enter mt-10 flex flex-row flex-wrap items-center justify-center gap-3">
       <button
         type="button"
         onClick={scrollToContact}

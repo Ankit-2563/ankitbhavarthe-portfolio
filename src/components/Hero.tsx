@@ -11,16 +11,16 @@ export function Hero() {
         </div>
       )}
 
-      <div className="hero-enter delay-1">
+      <div className="hero-enter">
         <div className="hero-headline">{siteConfig.tagline}</div>
         <div className="hero-sub">{siteConfig.taglineAccent}</div>
       </div>
 
-      <p className="hero-enter delay-2 mt-6 max-w-xl text-base leading-relaxed text-gray-500 sm:text-lg">
+      <p className="hero-enter mt-6 max-w-xl text-base leading-relaxed text-gray-500 sm:text-lg">
         {siteConfig.bio}
       </p>
 
-      <div className="hero-enter delay-3 mt-8 flex flex-wrap items-center justify-center gap-2">
+      <div className="hero-enter mt-8 flex flex-wrap items-center justify-center gap-2">
         {siteConfig.techStack.map((tech) => (
           <span
             key={tech}

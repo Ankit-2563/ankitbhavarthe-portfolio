@@ -7,7 +7,7 @@ type LatestCommitWidgetProps = {
 
 export function LatestCommitWidget({ commit }: LatestCommitWidgetProps) {
   return (
-    <div className="float-card-3 absolute top-8 right-4 z-0 hidden w-fit md:right-16 md:block">
+    <div className="absolute top-8 right-4 z-0 hidden w-fit md:right-16 md:block">
       <a
         href={commit.url}
         target="_blank"
