@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Caveat, Sora } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
@@ -85,6 +86,7 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-full flex-col">
         {children}
+        <Analytics />
       </body>
     </html>
   );
