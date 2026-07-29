@@ -59,81 +59,16 @@ export default function RootLayout({
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": `${baseUrl}/#person`,
     name: siteConfig.name,
-    alternateName: ["Bhavarthe Ankit Budhaji", "Ankit Budhaji Bhavarthe"],
-    url: baseUrl,
-    image: `${baseUrl}/og-image.png`,
+    url: `${baseUrl}/`,
     sameAs: [
       siteConfig.github,
       siteConfig.linkedin,
       siteConfig.twitter,
     ],
-    jobTitle: "Co-Founder & Full Stack Developer",
-    worksFor: {
-      "@type": "Organization",
-      name: "Kairos",
-      description: "Digital agency delivering end-to-end full stack development and design solutions.",
-    },
-    alumniOf: {
-      "@type": "EducationalOrganization",
-      name: "Shivajirao S. Jondhale College of Engineering",
-    },
-    knowsAbout: [
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Node.js",
-      "PostgreSQL",
-      "AWS",
-      "Tailwind CSS",
-      "MongoDB",
-      "Express.js",
-      "Serverless Architecture",
-      "TensorFlow.js",
-      "OpenCV",
-      "Computer Vision",
-      "Face Recognition",
-    ],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Ulhasnagar",
-      addressCountry: "IN",
-    },
+    jobTitle: "Software Engineer",
     email: siteConfig.email,
     description: siteConfig.description,
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${baseUrl}/#website`,
-    url: baseUrl,
-    name: siteConfig.name,
-    description: siteConfig.description,
-    publisher: {
-      "@id": `${baseUrl}/#person`,
-    },
-  };
-
-  const siteLinks = [
-    { name: "Home", url: baseUrl, description: siteConfig.description },
-    { name: "GitHub", url: siteConfig.github, description: "Open source projects and code" },
-    { name: "LinkedIn", url: siteConfig.linkedin, description: "Professional profile and work history" },
-    { name: "Twitter", url: siteConfig.twitter, description: "Thoughts and building in public" },
-  ];
-
-  const navigationSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Site Navigation",
-    itemListElement: siteLinks.map((link, index) => ({
-      "@type": "SiteNavigationElement",
-      position: index + 1,
-      name: link.name,
-      url: link.url,
-      description: link.description,
-    })),
   };
 
   return (
@@ -146,14 +81,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(navigationSchema) }}
         />
       </head>
       <body className="flex min-h-full flex-col">
