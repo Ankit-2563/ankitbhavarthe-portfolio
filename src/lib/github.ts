@@ -14,59 +14,20 @@ type GitHubCommitResponse = {
 };
 
 
-const GITHUB_API = "https://api.github.com";
-
-function getHeaders(): HeadersInit {
-  const headers: HeadersInit = {
-    Accept: "application/vnd.github+json",
-    "X-GitHub-Api-Version": "2022-11-28",
-  };
-  if (process.env.GITHUB_TOKEN) {
-    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
-  }
-  return headers;
-}
-
 export async function getLatestCommit(): Promise<LatestCommit | null> {
   const { githubUsername, githubRepo } = siteConfig;
 
   try {
-    // 1. If authenticated, find the most recently pushed repo (public or private)
-    if (process.env.GITHUB_TOKEN) {
-      const reposRes = await fetch(
-        `${GITHUB_API}/user/repos?sort=pushed&per_page=1`,
-        { headers: getHeaders(), next: { revalidate: 300 } },
-      );
-
-      if (reposRes.ok) {
-        const repos = (await reposRes.json()) as { name: string; owner: { login: string }; default_branch: string }[];
-        const repo = repos[0];
-
-        if (repo) {
-          const commitRes = await fetch(
-            `${GITHUB_API}/repos/${repo.owner.login}/${repo.name}/commits?per_page=1`,
-            { headers: getHeaders(), next: { revalidate: 300 } },
-          );
-
-          if (commitRes.ok) {
-            const [latest] = (await commitRes.json()) as GitHubCommitResponse[];
-            if (latest) {
-              return {
-                message: truncateMessage(latest.commit.message),
-                branch: `${repo.name} · ${repo.default_branch}`,
-                date: latest.commit.author.date,
-                url: latest.html_url,
-              };
-            }
-          }
-        }
-      }
-    }
-
-    // 2. Public fallback: commits on the portfolio repo (no auth needed)
     const res = await fetch(
-      `${GITHUB_API}/repos/${githubUsername}/${githubRepo}/commits?per_page=1`,
-      { headers: getHeaders(), next: { revalidate: 300 } },
+      `https://api.github.com/repos/${githubUsername}/${githubRepo}/commits?per_page=1`,
+      {
+        headers: {
+          Accept: "application/vnd.github+json",
+          "X-GitHub-Api-Version": "2022-11-28",
+          ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}),
+        },
+        next: { revalidate: 300 },
+      },
     );
 
     if (res.ok) {
